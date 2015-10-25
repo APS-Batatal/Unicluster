@@ -70,4 +70,12 @@ probably best not to use it. I mean, were you going to anyway? */
 	box-sizing:         $type;
 }
 
-
+@mixin no-select{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+}
