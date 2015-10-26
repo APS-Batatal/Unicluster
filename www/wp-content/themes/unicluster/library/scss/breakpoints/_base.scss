@@ -1,14 +1,42 @@
 /******************************
 GENERAL STYLES
 ******************************/
-a{
+p{
 	text-decoration: none;
+	font-family: $font2;
+	color:$text-color;
+	padding: 0;
+	margin:0;
+}
+a{
+	font-family: inherit;
 }
 h1,h2,h3,h4,h5,h6
 {
 	font-family: $font1;
 	font-weight: normal;
+	color:$text-color;
+	margin:0;
 }
+//CLEARFIX
 .clear{
 	clear:both;
+}
+//WRAPPERS
+.wrapper{
+	max-width: 1280px;
+	min-width: 900px;
+	width:95%;
+	margin: 0 auto;
+}
+
+//GRIDS
+.grid-item { 
+	width:25%;
+	//margin:10px;
+}
+
+//BUTTONS
+.btn{
+	@include button(white, $btn);
 }

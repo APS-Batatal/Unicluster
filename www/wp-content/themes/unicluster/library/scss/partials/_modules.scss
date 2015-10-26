@@ -7,7 +7,7 @@ TRIPLA BUTTON
 
     @if $color == false {
         color: white;
-        border: 1px solid;
+        border: 1px solid $color2;
     }
     @else {
         color: $color;
@@ -15,12 +15,14 @@ TRIPLA BUTTON
     }
 
     background-color: $color2;
+    text-decoration: none;
     padding: 12px 14px;
-    font-size: 14px;
     line-height: 14px;
     text-transform: uppercase;
     text-align: center;
-    font-family: $main-font2;
+    font-family: $font1;
+    font-size: 14px;
+    font-weight: bold;
 
     @include transition(all 0.3s ease);
 
@@ -29,6 +31,7 @@ TRIPLA BUTTON
     &:hover {
         color: $color2;
         background-color: $color;
+        border-color:$color2;
     }
 }
 /*********************************
@@ -37,33 +40,20 @@ SOCIAL LIST
 /********************
 SOCIAL SHARE
 ********************/
-/*.social-container{
-	margin: 0 auto;
+.social-container{
+	text-align: center;
 	ul {
-		overflow: auto;
-		position: relative;
 		li {
-			display: inline;
-			float: left;
-			border: 2px solid white;
-			@include background((-2px) -2px no-repeat);
+			display: inline-block;
 			@include transition(all ease 0.3s);
-			@include border-radius(100%);
-			margin-right: 20px;
-			@each $social in "facebook", "twitter", "instagram", "linkedin" {
+			@each $social in ("facebook", "twitter", "youtube") {
 				&.#{$social} {
 					$img: "main/socials/" + $social + ".png";
-					width: (image-width($img) / 2);
-					height: ((image-height($img) / 2) / 2);
+					width: (image-width($img));
+					height: ((image-height($img)));
 					background-image: image-url($img);
-					background-size: (image-width($img) / 2 image-height($img) / 2);
-					&:hover {
-						background-position-y: -((image-width($img) / 2) + 2);
-					}
+					background-size: (image-width($img) image-height($img));
 				}
-			}
-			&:last-child {
-				margin-right: 0;
 			}
 			a {
 				width: 100%;
@@ -72,4 +62,4 @@ SOCIAL SHARE
 			}
 		}
 	}
-}*/
+}

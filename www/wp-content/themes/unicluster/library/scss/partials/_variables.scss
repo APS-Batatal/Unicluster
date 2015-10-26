@@ -2,52 +2,36 @@
 @import "bones";
 
 /****************************************
-TRIPLA CUSTOM VARIABLES
+UNICLUSTER CUSTOM VARIABLES
 ****************************************/
 
 /********************
 COLORS
 *********************/
 //Colors (by names)  - www.name-of-color.com
-$cadet:#4e616f;
-$bali-hai:#839fb4;
-$river-bed:#3e4e59;
-$light-carmine-pink:#e56d72;
-$sea-pink:#f3919c;
-$gainsboro:#dcdfe2;
-$chateau-green:#2DA05C;
+$woodland:#4D512B;
+$sushi:#84AD34;
+$turtle-green:#2A380B;
+$rifle-green:#3B4C25;
+$gray-nurse:#EAEAEA;
 
 //ITEMS
-//General
+
+//GENERAL
 $body-color: white;
+$text-color:$woodland;
+$page-color:$gray-nurse;
+$btn:$sushi;
 
-//Header
-$header-bg-color:$cadet;
-$color-a:$bali-hai;
-$color-a-hover:white;
-$contact-btn:$cadet;
+//HEADER
+$header-bg:$sushi;
+$header-hover:$turtle-green;
 
+//FOOTER
+$footer-bg-color:#3B4C25;
 
-//Footer
-$footer-bg-color:$cadet;
-$newsletter-bg:$river-bed;
-$newsletter-val-error:$light-carmine-pink;
-
-
-//Pages
-
-//Services
-$services-txt-color:$cadet;
-$services-input-error:$sea-pink;
-
-//Clients
-$clients-h1-color:$cadet;
-$carroussel-control:$cadet;
-$carroussel-control-disabled:$gainsboro;
-
-//About
-$about-text-color:$cadet;
-$cap-letter-color:$chateau-green;
+//PROJECTS
+$projects-border:$sushi;
 
 
 /*********************

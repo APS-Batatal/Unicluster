@@ -30,12 +30,3 @@ only screen and (min-device-pixel-ratio: 1.5) {
 //IMPORTS (INCLUDES)
 @import "includes/header/header";
 @import "includes/footer/footer";
-
-
-//TODO:remove
-html{
-	margin:0!important;
-}
-#wpadminbar{
-	display: none!important;
-}

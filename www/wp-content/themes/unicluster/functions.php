@@ -9,7 +9,7 @@ sidebars, comments, etc.
 */
 
 // LOAD BONES CORE (if you remove this, the theme will break)
-require_once( 'library/guaxinim.php' );
+require_once( 'library/unicluster.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 // require_once( 'library/admin.php' );
@@ -231,21 +231,6 @@ function bones_comments( $comment, $args, $depth ) {
 } // don't remove this bracket!
 
 
-/*
-This is a modification of a function found in the
-twentythirteen theme where we can declare some
-external fonts. If you're using Google Fonts, you
-can replace these fonts, change it in your scss files
-and be up and running in seconds.
-*/
-function bones_fonts() {
-  wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
-}
-
-add_action('wp_enqueue_scripts', 'bones_fonts');
-
-
-
 function custom_post_projects() {
   $labels = array(
     'name'               => _x( 'Projetos', 'post type general name' ),
@@ -265,11 +250,13 @@ function custom_post_projects() {
   $args = array(
     'labels'        => $labels,
     'description'   => 'Holds our projects data',
+    'taxonomies' => array('category'), 
     'public'        => true,
     'menu_position' => 2,
     'supports'      => array( 'title', 'editor', 'thumbnail'),
     'has_archive'   => false,
-    'capability_type' => 'post'
+    'capability_type' => 'post',
+    'show_in_nav_menus'   => true
     );
   register_post_type( 'projects', $args ); 
 }

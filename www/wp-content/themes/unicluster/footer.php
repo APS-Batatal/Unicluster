@@ -1,21 +1,18 @@
 <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 	<div id="inner-footer" class="wrap cf">
 		<div class="d-all">
-			<div class="d-1of4">
-				<p>Grupo de estudos</p>
-				<p><?php bloginfo( 'name' ); ?>.</p>
-			</div>
-			<div class="d-1of4">
+			<div class="t-1of4 d-1of4">&nbsp;</div>
+			<div class="t-1of4 d-1of4">
 				<p><?= get_field('address','options')['address'] ?></p>
 			</div>
-			<div class="d-1of4">
+			<div class="t-1of4 d-1of4">
 				<p class="source-org copyright">&copy; <?php echo date('Y'); ?> by <?php bloginfo( 'name' ); ?>.</p>
 			</div>			
-			<div class="d-1of4">
+			<div class="t-1of4 d-1of4 social-container">
 				<ul>
-					<li><?= get_field('twitter','options') ?></li>
-					<li><?= get_field('youtube','options') ?></li>
-					<li><?= get_field('facebook','options') ?></li>
+					<li class="facebook"><a href="<?= get_field('twitter','options') ?>" title="facebook" target="_blank"></a></li>
+					<li class="twitter"<a href="<?= get_field('youtube','options') ?>" title="twitter" target="_blank"></a></li>
+					<li class="youtube"><a href="<?= get_field('facebook','options') ?>" title="youtube" target="_blank"></a></li>
 				</ul>
 			</div>			
 		</div>
