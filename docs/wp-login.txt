@@ -1,3 +1,8 @@
 site:http://unicluster.com.br/teste
 usename:administrador
 password:Unicluster@2015
+
+Nome de usuário do FTP: site@unicluster.com.br
+Servidor FTP: ftp.unicluster.com.br
+FTP & porta FTPS explícita: 21
+Password: Unicluster@2015

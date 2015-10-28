@@ -28,7 +28,7 @@ function bones_ahoy() {
   load_theme_textdomain( 'bonestheme', get_template_directory() . '/library/translation' );
 
   // USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
-  require_once( 'library/custom-post-type.php' );
+  //require_once( 'library/custom-post-type.php' );
 
   // launching operation cleanup
   add_action( 'init', 'bones_head_cleanup' );
@@ -253,7 +253,7 @@ function custom_post_projects() {
     'taxonomies' => array('category'), 
     'public'        => true,
     'menu_position' => 2,
-    'supports'      => array( 'title', 'editor', 'thumbnail'),
+    'supports'      => array( 'title', 'editor', 'thumbnail', 'category'),
     'has_archive'   => false,
     'capability_type' => 'post',
     'show_in_nav_menus'   => true
@@ -261,7 +261,38 @@ function custom_post_projects() {
   register_post_type( 'projects', $args ); 
 }
 
+function custom_post_events() {
+  $labels = array(
+    'name'               => _x( 'Eventos', 'post type general name' ),
+    'singular_name'      => _x( 'Eventos', 'post type singular name' ),
+    'add_new'            => _x( 'Adicionar novo', 'book' ),
+    'add_new_item'       => __( 'Adicionar novo' ),
+    'edit_item'          => __( 'Editar' ),
+    'new_item'           => __( 'Novo' ),
+    'all_items'          => __( 'Todos' ),
+    'view_item'          => __( 'Ver' ),
+    'search_items'       => __( 'Pesquisar' ),
+    'not_found'          => __( 'Nenhum Eventos encontrado' ),
+    'not_found_in_trash' => __( 'Nenhum Eventos encontrado na lixeira' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Eventos'
+    );
+  $args = array(
+    'labels'        => $labels,
+    'description'   => 'Holds our projects data',
+    'taxonomies' => array('category'), 
+    'public'        => true,
+    'menu_position' => 2,
+    'supports'      => array( 'title', 'editor', 'thumbnail','category'),
+    'has_archive'   => false,
+    'capability_type' => 'post',
+    'show_in_nav_menus'   => true
+    );
+  register_post_type( 'events', $args ); 
+}
 
+
+add_action( 'init', 'custom_post_events' );
 add_action( 'init', 'custom_post_projects' );
 
 

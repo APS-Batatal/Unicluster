@@ -27,6 +27,9 @@
 			}
 			p{
 				padding-bottom: 30px;
+				&.categories{
+					padding:0;
+				}
 			}
 			a{
 			    position: relative;
