@@ -1,0 +1,12 @@
+#home{
+	height:700px;
+	.carousel{
+		max-width: 800px;
+		margin: 0 auto;
+		.item{
+			height: 400px;
+			@include background(url('http://lorempixel.com/600/600/cats/') center center no-repeat);
+			background-size: cover;
+		}
+	}
+}

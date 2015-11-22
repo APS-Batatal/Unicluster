@@ -5,7 +5,7 @@
 				<div id="inner-content" class="wrap cf">
 
 					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+						<h1 class="archive-title"><span><?php _e( 'Resultados para:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -27,14 +27,14 @@
 								</header>
 
 								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
+										<?php the_excerpt( '<span class="read-more">' . __( 'Leia mais &raquo;', 'bonestheme' ) . '</span>' ); ?>
 
 								</section>
 
 								<footer class="article-footer">
 
 									<?php if(get_the_category_list(', ') != ''): ?>
-                  					<?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
+                  					<?php printf( __( 'Categoria(s): %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
                   					<?php endif; ?>
 
                  					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
@@ -51,22 +51,15 @@
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
-											<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
+											<h1><?php _e( 'Desculpe, Nada encontrado.', 'bonestheme' ); ?></h1>
 										</header>
 										<section class="entry-content">
-											<p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
 										</section>
 										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
 										</footer>
 									</article>
-
 							<?php endif; ?>
-
 						</main>
-
-							<?php get_sidebar(); ?>
-
 					</div>
 
 			</div>

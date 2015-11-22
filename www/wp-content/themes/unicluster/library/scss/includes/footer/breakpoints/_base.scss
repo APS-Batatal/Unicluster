@@ -2,11 +2,13 @@ footer.footer{
 	background-color: $footer-bg-color;
 	p{
 		color:white;
+		margin: 10px 0;
 	}
 	.social-container
 	{
 		ul{
 			height: 30px;			
+		    padding: 10px 0;
 		}
 	}
 }

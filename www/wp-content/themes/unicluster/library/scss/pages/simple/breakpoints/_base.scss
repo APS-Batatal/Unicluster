@@ -1,0 +1,13 @@
+.content-container{
+	margin: 0 auto;
+	min-height:600px;
+	padding: 50px 0;
+	h1{text-align: center}
+	.content{
+		padding: 25px 0;
+		margin: 0 auto;
+		max-width: 960px;
+		text-align: center;
+		.btn{margin-top: 20px}
+	}
+}

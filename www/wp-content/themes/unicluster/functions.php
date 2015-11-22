@@ -58,6 +58,15 @@ function bones_ahoy() {
   // cleaning up excerpt
   add_filter( 'excerpt_more', 'bones_excerpt_more' );
 
+  //active class in menu filter
+  add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+  function special_nav_class($classes, $item){
+   if( in_array('current-menu-item', $classes) ){
+     $classes[] = 'active ';
+   }
+   return $classes;
+ }
+
 } /* end bones ahoy */
 
 // let's get this party started
