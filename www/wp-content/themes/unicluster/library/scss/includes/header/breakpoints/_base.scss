@@ -1,20 +1,25 @@
-header.header{
-	margin-top: 40px;
-	h1{
-		font-size: 40px;
-		text-align: center;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-	nav.navbar{
-		a{
-			text-transform: uppercase;
-			&.navbar-brand{
-				.brand{
-					width: auto;
-					height: 100%;
-				}
-			}
-		}
+header.header {
+  margin-top: 40px;
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  nav.navbar {
+    position: fixed;
+    top: 0;
+		left: 0;
+    width: 100%;
+    z-index: 99;
+    a {
+      text-transform: uppercase;
+      &.navbar-brand {
+        .brand {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
 	}
 }

@@ -124,14 +124,14 @@ new image size.
 
 /************* THEME CUSTOMIZE *********************/
 
-/* 
+/*
   A good tutorial for creating your own Sections, Controls and Settings:
   http://code.tutsplus.com/series/a-guide-to-the-wordpress-theme-customizer--wp-33722
-  
+
   Good articles on modifying the default options:
   http://natko.com/changing-default-wordpress-theme-customization-api-sections/
   http://code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
-  
+
   To do:
   - Create a js for the postmessage transport method
   - Create some sanitize functions to sanitize inputs
@@ -141,7 +141,7 @@ new image size.
 function bones_theme_customizer($wp_customize) {
   // $wp_customize calls go here.
   //
-  // Uncomment the below lines to remove the default customize sections 
+  // Uncomment the below lines to remove the default customize sections
 
   // $wp_customize->remove_section('title_tagline');
   // $wp_customize->remove_section('colors');
@@ -151,7 +151,7 @@ function bones_theme_customizer($wp_customize) {
 
   // Uncomment the below lines to remove the default controls
   // $wp_customize->remove_control('blogdescription');
-  
+
   // Uncomment the following to change the default section titles
   // $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
   // $wp_customize->get_section('background_image')->title = __( 'Images' );
@@ -252,14 +252,14 @@ function custom_post_projects() {
     'view_item'          => __( 'Ver' ),
     'search_items'       => __( 'Pesquisar' ),
     'not_found'          => __( 'Nenhum projeto encontrado' ),
-    'not_found_in_trash' => __( 'Nenhum projeto encontrado na lixeira' ), 
+    'not_found_in_trash' => __( 'Nenhum projeto encontrado na lixeira' ),
     'parent_item_colon'  => '',
     'menu_name'          => 'Projetos'
     );
   $args = array(
     'labels'        => $labels,
     'description'   => 'Holds our projects data',
-    'taxonomies' => array('category'), 
+    'taxonomies' => array('category'),
     'public'        => true,
     'menu_position' => 2,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'category'),
@@ -267,7 +267,7 @@ function custom_post_projects() {
     'capability_type' => 'post',
     'show_in_nav_menus'   => true
     );
-  register_post_type( 'projects', $args ); 
+  register_post_type( 'projects', $args );
 }
 
 function custom_post_events() {
@@ -282,14 +282,14 @@ function custom_post_events() {
     'view_item'          => __( 'Ver' ),
     'search_items'       => __( 'Pesquisar' ),
     'not_found'          => __( 'Nenhum Eventos encontrado' ),
-    'not_found_in_trash' => __( 'Nenhum Eventos encontrado na lixeira' ), 
+    'not_found_in_trash' => __( 'Nenhum Eventos encontrado na lixeira' ),
     'parent_item_colon'  => '',
     'menu_name'          => 'Eventos'
     );
   $args = array(
     'labels'        => $labels,
     'description'   => 'Holds our projects data',
-    'taxonomies' => array('category'), 
+    'taxonomies' => array('category'),
     'public'        => true,
     'menu_position' => 2,
     'supports'      => array( 'title', 'editor', 'thumbnail','category'),
@@ -297,7 +297,7 @@ function custom_post_events() {
     'capability_type' => 'post',
     'show_in_nav_menus'   => true
     );
-  register_post_type( 'events', $args ); 
+  register_post_type( 'events', $args );
 }
 
 

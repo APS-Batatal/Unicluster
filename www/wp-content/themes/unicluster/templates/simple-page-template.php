@@ -9,7 +9,9 @@
 		the_content();
 		endwhile; endif;
 		?>
-		<a class="btn" target="_blank" href="<?= get_field('button_link')?>"><?= get_field('button_title') ?></a>
+		<?php if(get_field('button_link') && get_field('button_title')): ?>
+			<a class="btn" target="_blank" href="<?= get_field('button_link')?>" title="<?= get_field('button_title') ?>"><?= get_field('button_title') ?></a>
+		<?php endif; ?>
 	</div>
 </section>
 <?php get_footer() ?>

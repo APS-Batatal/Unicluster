@@ -1,6 +1,12 @@
 /******************************
 GENERAL STYLES
 ******************************/
+html{
+	min-height: 480px;
+}
+#inner-content{
+	padding: 30px 0;
+}
 p{
 	text-decoration: none;
 	font-family: $font2;
@@ -31,7 +37,7 @@ h1,h2,h3,h4,h5,h6
 }
 
 //GRIDS
-.grid-item { 
+.grid-item {
 	width:25%;
 	//margin:10px;
 }

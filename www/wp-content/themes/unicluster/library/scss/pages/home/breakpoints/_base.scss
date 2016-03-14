@@ -1,12 +1,57 @@
 #home{
-	height:700px;
+	.featured-image{
+		width: 100%;
+		height: 200px;
+		margin: 0 auto;
+		background: center center no-repeat;
+		background-size: cover;
+		margin-bottom: 20px;
+	}
 	.carousel{
 		max-width: 800px;
 		margin: 0 auto;
 		.item{
+			position: relative;
+			width: 800px;
 			height: 400px;
 			@include background(url('http://lorempixel.com/600/600/cats/') center center no-repeat);
 			background-size: cover;
+			background: center center no-repeat;
+			background-size: cover;
+			>a{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top:0;
+				left: 0;
+			}
+			.title,.category{
+				position: absolute;
+				color: white;
+				padding: 5px 10px;
+				background: rgba(black,0.7);
+				margin: 0 20px;
+			}
+			.title{
+				top:20px;
+				font-size: 18px;
+			}
+			.category{
+				bottom: 20px;
+				font-size: 14px;
+				>a{
+					color:inherit;
+					text-decoration: none;
+				}
+			}
 		}
+	}
+	.content{
+		.title{
+			text-align: center;
+		}
+		max-width: 900px;
+		margin: 0 auto;
+		text-align: justify;
 	}
 }

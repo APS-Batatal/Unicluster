@@ -54,7 +54,7 @@
 							'container' => false,
 							'container_class' => 'menu cf',
 							'menu' => __( 'The Main Menu', 'bonestheme' ),
-							'menu_class' => 'nav navbar-nav',
+							'menu_class' => 'nav navbar-nav t-1of2',
 							'theme_location' => 'main-nav',
 							'before' => '',
 							'after' => '',
@@ -63,11 +63,12 @@
 							'depth' => 0,
 							'fallback_cb' => ''
 							)); ?>
-							<form class="navbar-form navbar-right" role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
-								<div class="form-group">
+							<form class="navbar-form navbar-right t-1of2" role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+								<div class="form-group m-2of3">
 									<input type="text" class="form-control" placeholder="Buscar" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s">
 								</div>
-								<button type="submit" class="btn btn-default" id="searchsubmit" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+								<button type="submit" class="btn btn-default m-1of3" id="searchsubmit" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+								<div class="clear"></div>
 							</form>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->

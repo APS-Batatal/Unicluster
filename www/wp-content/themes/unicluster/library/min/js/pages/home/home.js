@@ -1,11 +1,10 @@
 jQuery(document).ready(function($) {
 	jQuery('.carousel').slick({
-		slidesToShow: 3,
+		slidesToShow: 1,
 		slidesToScroll: 1,
-		dots:true
-		//centerMode: true,
-  		//centerPadding: '60px',
-		//arrows: false,
-		//fade: true
+		dots:true,
+		arrows: false,
+		autoplay:true,
+		autoplaySpeed:5000,
 	});
 });

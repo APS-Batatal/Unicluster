@@ -1,1 +1,11 @@
 @import 'breakpoints/base';
+@media only screen and (min-width: 768px) {
+	@import "breakpoints/768up";
+}
+@media only screen and (min-width: 1024px) {
+	@import "breakpoints/1024up";
+
+}
+@media only screen and (min-width: 1600px) {
+	@import "breakpoints/1600up";
+}
