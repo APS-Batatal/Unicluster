@@ -32,7 +32,7 @@
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 	<div id="container" class="wrapper">
 		<header class="header">
-		<h1><?= get_bloginfo('name') ?></h1>
+		<h1><a href="<?= get_site_url(); ?>" title="<?= get_bloginfo('name') ?>"><?= get_bloginfo('name') ?></h1>
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->

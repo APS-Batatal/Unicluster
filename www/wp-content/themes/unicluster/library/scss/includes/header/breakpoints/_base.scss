@@ -5,6 +5,10 @@ header.header {
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
+    >a{
+      text-decoration: none;
+      color:black;
+    }
   }
   nav.navbar {
     position: fixed;

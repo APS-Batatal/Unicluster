@@ -54,4 +54,41 @@
 		margin: 0 auto;
 		text-align: justify;
 	}
+	.blocks-content{
+
+		ul{
+			text-align: center;
+			li{
+				position: relative;
+				display: inline-block;
+				width: (1/3)*100%;
+				&:not(:last-child){
+					margin-right: 15px;
+				}
+				a{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top:0;
+					left:0;
+				}
+				.img{
+					width: 100%;
+					height: 170px;
+					background: center center no-repeat;
+					background-size: cover;
+					margin: 15px 0;
+				}
+				>div{
+					text-align: justify;
+				}
+			}
+		}
+	}
+	.gallery-container{
+		margin-top: 50px;
+		h2{
+			text-align: center;
+		}
+	}
 }

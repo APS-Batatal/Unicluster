@@ -22,6 +22,31 @@ Template Name: Home
 			<?= $post->post_content ?>
 		</div>
 		<div class="clear"></div>
+		<div class="blocks-content content">
+			<ul>
+				<?php foreach(get_field('blocks') as $block): ?>
+					<li>
+						<?php if($block['link']): ?>
+							<a href="<?= $block['link'] ?>"></a>
+						<?php endif ?>
+						<?php if($block['title']): ?>
+							<h2><?= $block['title'] ?></h2>
+						<?php endif ?>
+						<?php if($block['image']): ?>
+							<div class="img" style="background-image:url(<?= $block['image'] ?>)"></div>
+						<?php endif ?>
+						<?php if($block['content']): ?>
+							<div>
+								<?= $block['content'] ?>
+							</div>
+						<?php endif ?>
+				</li>
+				<?php endforeach ?>
+			</ul>
+			<!-- <pre>
+				<?php var_dump(get_field('blocks')) ?>
+			</pre> -->
+		</div>
 	</section>
 </div>
 <?php wp_enqueue_script('home', get_template_directory_uri() . '/library/min/js/pages/home/home.js'); ?>

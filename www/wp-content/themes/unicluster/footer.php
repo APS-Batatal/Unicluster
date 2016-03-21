@@ -7,14 +7,14 @@
 			</div>
 			<div class="t-1of4 d-1of4">
 				<p class="source-org copyright">&copy; <?php echo date('Y'); ?> by <?php bloginfo( 'name' ); ?>.</p>
-			</div>			
+			</div>
 			<div class="t-1of4 d-1of4 social-container">
 				<ul>
-					<li class="facebook"><a href="<?= get_field('twitter','options') ?>" title="facebook" target="_blank"></a></li>
-					<li class="twitter"<a href="<?= get_field('youtube','options') ?>" title="twitter" target="_blank"></a></li>
-					<li class="youtube"><a href="<?= get_field('facebook','options') ?>" title="youtube" target="_blank"></a></li>
+					<li class="facebook"><a href="<?= get_field('facebook','options') ?>" title="facebook" target="_blank"></a></li>
+					<li class="twitter"><a href="<?= get_field('twitter','options') ?>" title="twitter" target="_blank"></a></li>
+					<li class="youtube"><a href="<?= get_field('youtube','options') ?>" title="youtube" target="_blank"></a></li>
 				</ul>
-			</div>			
+			</div>
 		</div>
 	</div>
 </footer>
