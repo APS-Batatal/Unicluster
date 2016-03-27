@@ -1,54 +1,35 @@
+<?php wp_enqueue_style('home', get_template_directory_uri() . '/library/min/css/pages/home/home.css'); ?>
 <?php get_header(); ?>
-
-			<div id="content">
-
-				<div id="inner-content" class="wrap cf">
-
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<?php
-								/*
-								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
-								 *
-								 * So this function will bring in the needed template file depending on what the post
-								 * format is. The different post formats are located in the post-formats folder.
-								 *
-								 *
-								 * REMEMBER TO ALWAYS HAVE A DEFAULT ONE NAMED "format.php" FOR POSTS THAT AREN'T
-								 * A SPECIFIC POST FORMAT.
-								 *
-								 * If you want to remove post formats, just delete the post-formats folder and
-								 * replace the function below with the contents of the "format.php" file.
-								*/
-								get_template_part( 'post-formats/format', get_post_format() );
-							?>
-
-						<?php endwhile; ?>
-
-						<?php else : ?>
-
-							<article id="post-not-found" class="hentry cf">
-									<header class="article-header">
-										<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-									</header>
-									<section class="entry-content">
-										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-									</section>
-									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single.php template.', 'bonestheme' ); ?></p>
-									</footer>
-							</article>
-
-						<?php endif; ?>
-
-					</main>
-
-					<?php get_sidebar(); ?>
-
-				</div>
-
+<div id="inner-content" class="wrap cf">
+	<section id="home">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<div class="content">
+				<h1 class="title"><?php the_title() ?></h1>
+				<?php $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' )['0'] ?>
+				<?php if(!is_null($featuredImage)): ?>
+					<div class="featured-image" style="background-image:url(<?= $featuredImage ?>)"></div>
+				<?php endif ?>
+				<?= the_content() ?>
 			</div>
-
+			<?php $gallery = get_field('gallery') ?>
+			<?php if($gallery && sizeof($gallery)>0): ?>
+			<div class="gallery-container">
+				<h2>Fotos</h2>
+				<div id="carousel-home" class="carousel">
+						<?php foreach($gallery as $item): ?>
+							<div class="item" style="background-image:url(<?= $item['image'] ?>)">
+							</div>
+						<?php endforeach ?>
+				</div>
+			</div>
+		<?php endif ?>
+		<?php endwhile;endif; ?>
+	</section>
+</div>
+<div class="lightbox">
+	<div class="overlay">
+	</div>
+</div>
+<?php wp_enqueue_script('home', get_template_directory_uri() . '/library/min/js/pages/home/home.js'); ?>
+<?php wp_enqueue_script('single', get_template_directory_uri() . '/library/min/js/pages/single/single.js'); ?>
 <?php get_footer(); ?>

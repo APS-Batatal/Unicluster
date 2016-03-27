@@ -1,0 +1,71 @@
+.lightbox{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  opacity: 0;
+  @include transition(0.3s ease-in-out);
+  &.show{
+    display: block;
+    opacity: 1;
+  }
+  .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(white,0.7);
+		.lightbox-container{
+			width: 100%;
+			height: 100%;
+	    text-align: center;
+			position: relative;
+
+			.img-container{
+				height: 100%;
+				position: relative;
+        background: center center no-repeat;
+        background-size: contain;
+				.controllers{
+					position: absolute;
+					width: 20%;
+					height: 100%;
+					background: red;
+					cursor: pointer;
+					&.left{
+						left: 0;
+					}
+					&.right{
+						right: 0;
+					}
+				}
+				img{
+					height:100%;
+				}
+			}
+
+			.thumbs-container{
+				height: 20%;
+        ul{
+          height: 100%;
+          margin: 0;
+          padding-top: 20px;
+          li{
+            display: inline-block;
+            text-align: center;
+            height: 100%;
+            cursor: pointer;
+            &:not(:last-child){
+              margin-right: 20px;
+            }
+            img{
+              height: 100%;
+              width: auto;
+            }
+          }
+        }
+			}
+		}
+  }
+}

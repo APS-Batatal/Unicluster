@@ -263,7 +263,7 @@ function custom_post_projects() {
     'public'        => true,
     'menu_position' => 2,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'category'),
-    'has_archive'   => false,
+    'has_archive'   => 'projetos',
     'capability_type' => 'post',
     'show_in_nav_menus'   => true
     );
@@ -293,7 +293,7 @@ function custom_post_events() {
     'public'        => true,
     'menu_position' => 2,
     'supports'      => array( 'title', 'editor', 'thumbnail','category'),
-    'has_archive'   => false,
+    'has_archive'   => 'eventos',
     'capability_type' => 'post',
     'show_in_nav_menus'   => true
     );

@@ -1,4 +1,5 @@
 <?php wp_enqueue_style('home', get_template_directory_uri() . '/library/min/css/pages/home/home.css'); ?>
+<?php wp_enqueue_script( 'lightbox', get_stylesheet_directory_uri() . '/library/min/js/includes/lightbox.js', array( 'jquery' ), '', true ); ?>
 <?php get_header(); ?>
 <div id="inner-content" class="wrap cf">
 	<section id="home">
@@ -16,10 +17,13 @@
 			<div class="gallery-container">
 				<h2>Fotos</h2>
 				<div id="carousel-home" class="carousel">
+					<?php $i=0; ?>
 						<?php foreach($gallery as $item): ?>
-							<div class="item" style="background-image:url(<?= $item['image'] ?>)">
+							<div class="item" rel=<?=$i?> style="background-image:url(<?= $item['image'] ?>)" data-src="<?= $item['image'] ?>">
 							</div>
+							<?php $i++; ?>
 						<?php endforeach ?>
+						<?php $i=0; ?>
 				</div>
 			</div>
 		<?php endif ?>
@@ -28,6 +32,12 @@
 </div>
 <div class="lightbox">
 	<div class="overlay">
+		<div class="lightbox-container">
+			<div class="img-container" style="background-image:url(http://localhost/unicluster/www/wp-content/uploads/2015/11/nyan-2-1024x640.jpg)">
+				<div class="controllers left"></div>
+				<div class="controllers right"></div>
+			</div>
+		</div>
 	</div>
 </div>
 <?php wp_enqueue_script('home', get_template_directory_uri() . '/library/min/js/pages/home/home.js'); ?>
