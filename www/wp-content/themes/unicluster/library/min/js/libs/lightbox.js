@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
   console.log(images);
 
   //listeners
-  $('.slick-slider').on('click', '.slick-slide', function() {
+  $(document).on('click', '.slick-slider .slick-slide', function() {
     var index = $(this).attr('rel');
     changeImage(parseInt(index));
     $lightbox.addClass('show');
