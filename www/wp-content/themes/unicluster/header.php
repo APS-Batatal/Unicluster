@@ -13,15 +13,27 @@
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
-	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/apple-touch-icon-152x152.png">
+	<link rel="icon" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/favicon-16x16.png">
+	<link rel="icon" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/favicon-32x32.png">
+	<link rel="icon" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/favicon-96x96.png">
+	<link rel="icon" sizes="128x128" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/favicon-128.png">
+	<link rel="icon" sizes="196x196" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon/favicon-196x196.png">
+	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon.ico">
 	<!--[if IE]>
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 	<![endif]-->
 	<?php // or, set /favicon.ico for IE10 win ?>
-	<meta name="msapplication-TileColor" content="#f01d4f">
-	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-	<meta name="theme-color" content="#121212">
+	<meta name="msapplication-TileColor" content="#3B4C25">
+	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/favicon/win8-tile-icon.png">
+	<meta name="theme-color" content="#3B4C25">
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php // wordpress head functions ?>
 	<?php wp_head(); ?>

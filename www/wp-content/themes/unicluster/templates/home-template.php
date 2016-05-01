@@ -3,7 +3,7 @@
 Template Name: Home
 */
 ?>
-<?php wp_enqueue_style('home', get_template_directory_uri() . '/library/min/css/pages/home/home.css'); ?>
+<?php wp_enqueue_style('single', get_template_directory_uri() . '/library/min/css/pages/single/single.css'); ?>
 <?php get_header(); ?>
 <div id="inner-content" class="wrap cf">
 	<section id="home">

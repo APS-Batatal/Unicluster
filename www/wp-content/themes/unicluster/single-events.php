@@ -1,4 +1,5 @@
-<?php wp_enqueue_style('home', get_template_directory_uri() . '/library/min/css/pages/home/home.css'); ?>
+<?php wp_enqueue_style('single', get_template_directory_uri() . '/library/min/css/pages/single/single.css'); ?>
+<?php wp_enqueue_script( 'lightbox', get_stylesheet_directory_uri() . '/library/min/js/includes/lightbox.js', array( 'jquery' ), '', true ); ?>
 <?php get_header(); ?>
 <div id="inner-content" class="wrap cf">
 	<section id="home">
@@ -16,20 +17,20 @@
 			<div class="gallery-container">
 				<h2>Fotos</h2>
 				<div id="carousel-home" class="carousel">
+					<?php $i=0; ?>
 						<?php foreach($gallery as $item): ?>
-							<div class="item" style="background-image:url(<?= $item['image'] ?>)">
+							<div class="item" rel=<?=$i?> style="background-image:url(<?= $item['image'] ?>)" data-src="<?= $item['image'] ?>">
 							</div>
+							<?php $i++; ?>
 						<?php endforeach ?>
+						<?php $i=0; ?>
 				</div>
 			</div>
 		<?php endif ?>
 		<?php endwhile;endif; ?>
 	</section>
 </div>
-<div class="lightbox">
-	<div class="overlay">
-	</div>
-</div>
+<?php require_once('includes/lightbox.php') ?>
 <?php wp_enqueue_script('home', get_template_directory_uri() . '/library/min/js/pages/home/home.js'); ?>
 <?php wp_enqueue_script('single', get_template_directory_uri() . '/library/min/js/pages/single/single.js'); ?>
 <?php get_footer(); ?>
