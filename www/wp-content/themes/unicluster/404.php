@@ -4,7 +4,7 @@
 	<section id="error">
 		<div class="content">
 			<div class="error-icon"></div>
-			<h1>404!</h1>
+			<h1>Erro 404!</h1>
 			<h2>O conteúdo não existe</h2>
 		</div>
 	</section>
