@@ -48,12 +48,17 @@
 		}
 	}
 	.content{
+		max-width: 900px;
+		margin: 0 auto;
+		text-align: left;
 		.title{
 			text-align: center;
 		}
-		max-width: 900px;
-		margin: 0 auto;
-		text-align: justify;
+		.author{
+			text-align: right;
+			font-size: 12px;
+			font-family: 'Roboto';
+		}
 	}
 	.blocks-content{
 
@@ -92,4 +97,11 @@
 			text-align: center;
 		}
 	}
+}
+.comment-section{
+	text-align: center;
+	margin: 0 auto;
+	max-width: 768px;
+	.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style] {width: 100% !important;}
+	.fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {width: 100% !important;}
 }

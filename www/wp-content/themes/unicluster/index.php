@@ -25,6 +25,7 @@
 										<a href="<?php the_permalink() ?>"></a>
 										<header class="article-header">
 											<h3 class="h2"><?php the_title(); ?></h3>
+											<h4 class="author">Por: <?php the_author(); ?></h4>
 										</header>
 										<?php $featuredImage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' )['0'] ?>
 										<?php if(!is_null($featuredImage)): ?>
