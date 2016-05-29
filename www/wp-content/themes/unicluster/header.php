@@ -56,7 +56,11 @@
 	<!-- //FACEBOOK SDK -->
 	<div id="container" class="wrapper">
 		<header class="header">
-		<h1><a href="<?= get_site_url(); ?>" title="<?= get_bloginfo('name') ?>"><?= get_bloginfo('name') ?></h1>
+			<?php if(get_field('header_image','options')): ?>
+				<img src="<?php echo get_field('header_image','options') ?>" alt="<?php echo get_bloginfo('name') ?>" />
+			<?php else: ?>
+				<h1><a href="<?= get_site_url(); ?>" title="<?= get_bloginfo('name') ?>"><?= get_bloginfo('name') ?></h1>
+			<?php endif ?>
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
