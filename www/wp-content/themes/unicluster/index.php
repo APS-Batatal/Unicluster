@@ -21,7 +21,7 @@
 						<ul>
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 								<li class="m-all t-1of2 d-1of3 h-1of4">
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+									<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" style="background-color:<?php echo get_field('category_color') ?>">
 										<a href="<?php the_permalink() ?>"></a>
 										<header class="article-header">
 											<h3 class="h2"><?php the_title(); ?></h3>
