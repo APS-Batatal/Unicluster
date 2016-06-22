@@ -73,7 +73,7 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a class="navbar-brand" href="<?= home_url(); ?>">
-							<img class="brand" alt="Brand" src="<?= get_template_directory_uri().'/library/images/header/android.jpg' ?>">
+							<img class="brand" alt="Brand" src="<?= get_template_directory_uri().'/library/images/header/android.png' ?>">
 						</a>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->

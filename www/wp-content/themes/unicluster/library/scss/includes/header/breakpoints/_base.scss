@@ -20,13 +20,24 @@ header.header {
 		left: 0;
     width: 100%;
     z-index: 99;
+    background: $unicluser-green;
     a {
       text-transform: uppercase;
+      color: white;
+      text-shadow: none;
       &.navbar-brand {
         .brand {
           width: auto;
           height: 100%;
         }
+      }
+    }
+    #searchsubmit{
+      background: $unicluser-green;
+      text-shadow: none;
+      color: white;
+      &:hover{
+        color:#777;
       }
     }
 	}
