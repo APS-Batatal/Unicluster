@@ -57,7 +57,9 @@
 	<div id="container" class="wrapper">
 		<header class="header">
 			<?php if(get_field('header_image','options')): ?>
-				<img src="<?php echo get_field('header_image','options') ?>" alt="<?php echo get_bloginfo('name') ?>" />
+				<a href="<?= home_url(); ?>">
+					<img src="<?php echo get_field('header_image','options') ?>" alt="<?php echo get_bloginfo('name') ?>" />					
+				</a>
 			<?php else: ?>
 				<h1><a href="<?= get_site_url(); ?>" title="<?= get_bloginfo('name') ?>"><?= get_bloginfo('name') ?></h1>
 			<?php endif ?>
@@ -72,9 +74,6 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?= home_url(); ?>">
-							<img class="brand" alt="Brand" src="<?= get_template_directory_uri().'/library/images/header/android.png' ?>">
-						</a>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse">
